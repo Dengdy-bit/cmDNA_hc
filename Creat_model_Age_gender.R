@@ -152,15 +152,15 @@ n_in <- sum(cm_rf_in$table)
 n_ex <- sum(cm_rf_ex$table)        
 
 results_df <- add_row_to_df(results_df, "Training Cohort", "Random Forest",
-                          auc(roc_rf_train)[1], ci_rf_train[1], ci_rf_train[3],
+                          auc(roc_rf_train)[1], ci_auc_train[1], ci_auc_train[3],
                           cm_rf_train, n_train)
 
 results_df <- add_row_to_df(results_df, "Internal Cohort", "Random Forest",
-                          auc(roc_rf_in)[1], ci_rf_in[1], ci_rf_in[3],
+                          auc(roc_rf_in)[1],ci_auc_in[1], ci_auc_in[3],
                           cm_rf_in, n_in)
 
 results_df <- add_row_to_df(results_df, "External Cohort", "Random Forest",
-                          auc(roc_rf_ex)[1],  ci_rf_ex[1], ci_rf_ex[3],
+                          auc(roc_rf_ex)[1],  ci_auc_ex[1], ci_auc_ex[3],
                           cm_rf_ex, n_ex)
 write.csv(results_df, "AUC_Age_Gender_performance_summary.csv", row.names = FALSE)
 
@@ -308,15 +308,15 @@ n_in <- sum(cm_rf_in$table)
 n_ex <- sum(cm_rf_ex$table)       
 
 results_df <- add_row_to_df(results_df, "Training Cohort", "Random Forest",
-                          auc(roc_rf_train)[1], ci_rf_train[1], ci_rf_train[3],
+                          auc(roc_rf_train)[1], ci_auc_train[1], ci_auc_train[3],
                           cm_rf_train, n_train)
 
 results_df <- add_row_to_df(results_df, "Internal Cohort", "Random Forest",
-                          auc(roc_rf_in)[1], ci_rf_in[1], ci_rf_in[3],
+                          auc(roc_rf_in)[1],ci_auc_in[1], ci_auc_in[3],
                           cm_rf_in, n_in)
 
 results_df <- add_row_to_df(results_df, "External Cohort", "Random Forest",
-                          auc(roc_rf_ex)[1],  ci_rf_ex[1], ci_rf_ex[3],
+                          auc(roc_rf_ex)[1],  ci_auc_ex[1], ci_auc_ex[3],
                           cm_rf_ex, n_ex)
 write.csv(results_df, "AUC_Gender_performance_summary.csv", row.names = FALSE)
 
@@ -461,14 +461,14 @@ n_train <- sum(cm_rf_train$table)
 n_in <- sum(cm_rf_in$table)        
 n_ex <- sum(cm_rf_ex$table)      
 results_df <- add_row_to_df(results_df, "Training Cohort", "Random Forest",
-                          auc(roc_rf_train)[1], ci_rf_train[1], ci_rf_train[3],
+                          auc(roc_rf_train)[1], ci_auc_train[1], ci_auc_train[3],
                           cm_rf_train, n_train)
 
 results_df <- add_row_to_df(results_df, "Internal Cohort", "Random Forest",
-                          auc(roc_rf_in)[1], ci_rf_in[1], ci_rf_in[3],
+                          auc(roc_rf_in)[1],ci_auc_in[1], ci_auc_in[3],
                           cm_rf_in, n_in)
 
 results_df <- add_row_to_df(results_df, "External Cohort", "Random Forest",
-                          auc(roc_rf_ex)[1],  ci_rf_ex[1], ci_rf_ex[3],
+                          auc(roc_rf_ex)[1],  ci_auc_ex[1], ci_auc_ex[3],
                           cm_rf_ex, n_ex)
 write.csv(results_df, "AUC_Age_performance_summary.csv", row.names = FALSE)
